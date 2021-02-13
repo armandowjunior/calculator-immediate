@@ -5,7 +5,7 @@ function App() {
   const [displayPrevious, setDisplayPrevious] = useState("");
   const [displayCurrent, setDisplayCurrent] = useState("");
   const [previousOperand, setPreviousOperand] = useState("");
-  const [currentOperand, setCurrentOperand] = useState("");
+  const [currentOperand, setCurrentOperand] = useState("0");
   const [op, setOp] = useState("");
 
   useEffect(() => {
@@ -16,11 +16,12 @@ function App() {
     setDisplayPrevious("");
     setDisplayCurrent("");
     setPreviousOperand("");
-    setCurrentOperand("");
+    setCurrentOperand("0");
     setOp("");
   };
 
   const backspace = () => {
+    if (currentOperand === "0") return;
     setCurrentOperand((prev) => prev.slice(0, -1));
   };
 

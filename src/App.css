@@ -24,7 +24,7 @@ body {
 
 .App {
   width: 20rem;
-  margin: 5em auto;
+  margin: 5rem auto;
   display: flex;
   flex-wrap: wrap;
   background-color: black;
