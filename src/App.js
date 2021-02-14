@@ -21,7 +21,7 @@ function App() {
   };
 
   const backspace = () => {
-    if (currentOperand === "0") return;
+    if (currentOperand === "0" || currentOperand === "") return;
     setCurrentOperand((prev) => prev.slice(0, -1));
   };
 
@@ -63,9 +63,9 @@ function App() {
         return;
     }
     setPreviousOperand("");
-    setCurrentOperand(computation);
+    setCurrentOperand(computation.toString());
     setOp("");
-    return computation;
+    return computation.toString();
   }
 
   const updateDisplay = () => {
